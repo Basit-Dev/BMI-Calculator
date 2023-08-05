@@ -8,7 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+    }
+    
+    
+    
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     
@@ -24,23 +32,32 @@ class ViewController: UIViewController {
         weightLabel.text = ("\(weight)Kg")
     }
     
-    @IBAction func calculate(_ sender: UIButton) {
+    @IBAction func calculate(_ sender: Any) {
         let heightResult = heightSlider.value
         let weightResult = weightSlider.value
         let result = weightResult / (heightResult * heightResult)
-//        Could use power of weightResult / pow(height, 2)
         
-        let bmi = String(format: "%.1f", result)
-        print(bmi)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//        Instantiate Results View Controller
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
         
+        secondVC.bmiResult =  String(format: "%.1f", result)
+        show(secondVC, sender: self)
     }
-    
-    
-    
 }
 
+//    // Provide an initializer for the class
+//      init(bmiResult: String) {
+//          self.bmiResult = bmiResult
+//          super.init(nibName: nil, bundle: nil)
+//      }
+//
+//      required init?(coder: NSCoder) {
+//          fatalError("init(coder:) has not been implemented")
+//      }
+//    var result: Float = 0.0
+//
+//    // A computed property to get the formatted result
+//    var formattedResult: String {
+//        return String(format: "%.2f", result)
+//    }
