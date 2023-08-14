@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         let secondVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
         
         secondVC.bmiResult =  String(format: "%.1f", result)
-        show(secondVC, sender: self)
+        present(secondVC, animated: true)0
     }
 }
 
