@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
     }
     
-    
+    var bmiValue = ""
     
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -38,26 +38,21 @@ class ViewController: UIViewController {
         let result = weightResult / (heightResult * heightResult)
         
 //        Instantiate Results View Controller
+        bmiValue =  String(format: "%.1f", result)
+        displayVC()
+        
+        // ANOTHER WAY by using segue
+        // Perform a segue of ResultsViewController and the sender is ViewController
+        // performSegue(withIdentifier: "ResultsViewController", sender: self)
+//        Then link it with func prepare
+    }
+    
+    func displayVC()  {
+        // Instantiate Results View Controller
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
-        
-        secondVC.bmiResult =  String(format: "%.1f", result)
+        secondVC.bmiResult = bmiValue
         present(secondVC, animated: true)
     }
-}
 
-//    // Provide an initializer for the class
-//      init(bmiResult: String) {
-//          self.bmiResult = bmiResult
-//          super.init(nibName: nil, bundle: nil)
-//      }
-//
-//      required init?(coder: NSCoder) {
-//          fatalError("init(coder:) has not been implemented")
-//      }
-//    var result: Float = 0.0
-//
-//    // A computed property to get the formatted result
-//    var formattedResult: String {
-//        return String(format: "%.2f", result)
-//    }
+//Create a video about sague
