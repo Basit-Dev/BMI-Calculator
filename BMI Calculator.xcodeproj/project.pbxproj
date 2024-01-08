@@ -14,6 +14,7 @@
 		6E5A64ED2A7BCA9E00828B1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A64EC2A7BCA9E00828B1D /* Assets.xcassets */; };
 		6E5A64F02A7BCA9E00828B1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A64EE2A7BCA9E00828B1D /* LaunchScreen.storyboard */; };
 		6EC308EF2A7EBA3500D3151A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC308EE2A7EBA3500D3151A /* ResultsViewController.swift */; };
+		6ECB6C3D2B4C928C001F900C /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECB6C3C2B4C928C001F900C /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		6E5A64EF2A7BCA9E00828B1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E5A64F12A7BCA9E00828B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EC308EE2A7EBA3500D3151A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		6ECB6C3C2B4C928C001F900C /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		6E99799F2A7BFF55007A9414 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6ECB6C3C2B4C928C001F900C /* CalculatorBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				6E5A64E82A7BCA9D00828B1D /* ViewController.swift in Sources */,
 				6E5A64E42A7BCA9D00828B1D /* AppDelegate.swift in Sources */,
 				6E5A64E62A7BCA9D00828B1D /* SceneDelegate.swift in Sources */,
+				6ECB6C3D2B4C928C001F900C /* CalculatorBrain.swift in Sources */,
 				6EC308EF2A7EBA3500D3151A /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

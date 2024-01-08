@@ -11,11 +11,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
     }
     
-    var bmiValue = ""
+    var calculateBrain = CalculatorBrain()
     
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -35,24 +33,23 @@ class ViewController: UIViewController {
     @IBAction func calculate(_ sender: Any) {
         let heightResult = heightSlider.value
         let weightResult = weightSlider.value
-        let result = weightResult / (heightResult * heightResult)
         
-//        Instantiate Results View Controller
-        bmiValue =  String(format: "%.1f", result)
+        calculateBrain.calculateBMI(height: heightResult, weight: weightResult)
         displayVC()
-        
-        // ANOTHER WAY by using segue
-        // Perform a segue of ResultsViewController and the sender is ViewController
-        // performSegue(withIdentifier: "ResultsViewController", sender: self)
-//        Then link it with func prepare
     }
     
     func displayVC()  {
         // Instantiate Results View Controller
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
-        secondVC.bmiResult = bmiValue
+        secondVC.bmiResult = calculateBrain.getBmiValue()
         present(secondVC, animated: true)
     }
-
-//Create a video about sague
+    
+    // NOTES
+    // Create a video about sague
+    // ANOTHER WAY by using segue
+    // Perform a segue of ResultsViewController and the sender is ViewController
+    // performSegue(withIdentifier: "ResultsViewController", sender: self)
+    // Then link it with func prepare
+}
