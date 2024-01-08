@@ -5,7 +5,8 @@
 //  Created by Abdul Basit on 08/01/2024.
 //
 
-import Foundation
+// This file is responsible for getting the user height/weight selected by the user and then calculating the BMI index to one decimal place, it then returns the BMI index value to viewController
+
 import UIKit
 
 struct CalculatorBrain {
