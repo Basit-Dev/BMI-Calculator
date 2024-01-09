@@ -11,7 +11,7 @@ import UIKit
 
 struct CalculatorBrain {
     
-    // BMI? is an optional struct now, as we are getting the value of BMI? struct to the bmi variable
+    // BMI? is an optional struct now, so that we can pass the struct values around rather than having indivisual variables in CalculatorBrain
     
     var bmi: BMI?
     
