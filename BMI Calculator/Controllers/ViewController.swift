@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondVC = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
         secondVC.bmiResult = calculateBrain.getBmiValue()
+        secondVC.bmiAdvice = calculateBrain.getAdvice()
+        secondVC.bmiColor = calculateBrain.getColor()
         present(secondVC, animated: true)
     }
     

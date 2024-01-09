@@ -10,32 +10,25 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultAdvice: UILabel!
+        
     @IBAction func recalculateButton(_ sender: UIButton) {
 //        Return to main VC
         self.dismiss(animated: true, completion: nil)
     }
     
-    var bmiResult = "0.0"
+    var bmiResult: String?
+    var bmiAdvice: String?
+    var bmiColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Update the label text with the passed formattedResultValue
-              resultLabel.text = bmiResult
+            resultLabel.text = bmiResult
+            resultAdvice.text = bmiAdvice
+            view.backgroundColor = bmiColor
     }
- 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
 }
 
 // Create a label programaticalyy

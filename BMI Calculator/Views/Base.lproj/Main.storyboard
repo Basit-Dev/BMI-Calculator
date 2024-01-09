@@ -208,6 +208,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ej2-5B-1L2"/>
                     <connections>
+                        <outlet property="resultAdvice" destination="RZ7-Oa-Ul5" id="s5a-Ek-L11"/>
                         <outlet property="resultLabel" destination="AZs-fF-lq3" id="3iv-m0-BUi"/>
                     </connections>
                 </viewController>
